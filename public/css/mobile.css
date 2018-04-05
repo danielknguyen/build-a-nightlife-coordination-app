@@ -1,3 +1,73 @@
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-
+  #bannerDiv {
+    padding: 100px 10px;
+  }
+  #bannerTitle {
+    font-size: 3em;
+  }
+  .bannerIcons {
+    font-size: 2em;
+  }
+  #bannerInfoDiv {
+    width: 100%;
+  }
+  #bannerInfo {
+    font-size: 1.5em;
+  }
+  form[name="searchFormIndex"] {
+    text-align: center;
+    margin: 25px 5px;
+    padding: 5px;
+  }
+  input[name="sIndex"] {
+    height: 50px;
+    width: 200px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 17px;
+  }
+  .navigation-logo {
+    width: 35%;
+  }
+  .navigation-links-div {
+    width: 65%;
+  }
+  .searchedItemDiv {
+    width: 99%;
+    height: 325px;
+  }
+  .item-photo {
+    height: 75px;
+    padding: 5px;
+  }
+  .item-info {
+    height: 100px;
+    width: 45%;
+    padding: 5px 15px;
+  }
+  .item-address {
+    height: 100px;
+    width: 35%;
+    padding: 5px;
+  }
+  .check-in {
+    width: 50px;
+    height: 100px;
+    float: left;
+    padding: 5px 2px;
+    text-align: center;
+  }
+  .ratings-stars-div {
+    height: 100px;
+    width: 100%;
+    clear: both;
+  }
+  .stars-info-div {
+    position: relative;
+    top: 70%;
+    transform: translateY(-30%);
+  }
+  form[name="registerForm"], form[name="loginForm"] {
+    width: 90%;
+  }
 }

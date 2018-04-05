@@ -1,8 +1,100 @@
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-
+  #bannerDiv {
+    padding: 100px 75px;
+  }
+  #bannerTitle {
+    font-size: 3em;
+  }
+  .bannerIcons {
+    font-size: 2em;
+  }
+  #bannerInfoDiv {
+    width: 100%;
+  }
+  #bannerInfo {
+    font-size: 1.5em;
+  }
+  form[name="searchFormIndex"] {
+    text-align: center;
+    margin: 25px 5px;
+    padding: 5px;
+  }
+  input[name="sIndex"] {
+    height: 50px;
+    width: 325px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-size: 20px;
+  }
+  .navigation-logo {
+    width: 40%;
+  }
+  .navigation-links-div {
+    width: 60%;
+  }
+  .searchedItemDiv {
+    width: 95%;
+    height: 275px;
+  }
+  .item-photo {
+    height: 125px;
+    padding: 5px;
+  }
+  .item-info {
+    height: 100px;
+    width: 45%;
+    padding: 15px;
+  }
+  .item-address {
+    height: 100px;
+    width: 35%;
+    padding: 5px;
+  }
+  .check-in {
+    width: 20%;
+    height: 100px;
+    float: left;
+    padding: 25px 5px;
+    text-align: center;
+  }
+  .ratings-stars-div {
+    height: 100px;
+    margin-top: 40px;
+  }
+  form[name="registerForm"], form[name="loginForm"] {
+    width: 80%;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-
+  .searchedItemDiv {
+    width: 85%;
+    height: 275px;
+  }
+  .item-photo {
+    height: 125px;
+    padding: 5px;
+  }
+  .item-info {
+    height: 100px;
+    width: 45%;
+    padding: 15px;
+  }
+  .item-address {
+    height: 100px;
+    width: 35%;
+    padding: 5px;
+  }
+  .check-in {
+    width: 20%;
+    height: 100px;
+    float: left;
+    padding: 25px 5px;
+    text-align: center;
+  }
+  .ratings-stars-div {
+    height: 100px;
+    margin-top: 30px;
+  }
 }
 @media only screen and (min-width: 992px) and (max-width: 1999px) {
 
