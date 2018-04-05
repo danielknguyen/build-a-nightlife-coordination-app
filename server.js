@@ -11,7 +11,8 @@ var express = require('express'),
     app = express(),
     session = require('express-session'),
     db = require('./config/db.js');
-    MongoStore = require('connect-mongo')(session);
+    MongoStore = require('connect-mongo')(session),
+    Yelp = require('yelp-fusion');
 
 var appConfig = function() {
   app.use(express.static(__dirname + '/public'));
@@ -49,7 +50,7 @@ var appConfig = function() {
     next();
   });
 }();
-var routes = require('./routes/routes.js')(app, flash, util, bcrypt, assert);
+var routes = require('./routes/routes.js')(app, flash, util, bcrypt, assert, Yelp);
 var port = process.env.PORT || 5000;
 var server = app.listen(port, function() {
   console.log("Express server is listening on port %s.", port);
