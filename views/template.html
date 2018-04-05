@@ -11,7 +11,7 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=" rel="stylesheet"> -->
     <!-- javascript/jquery link -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -20,6 +20,29 @@
     <!-- <title></title> -->
   </head>
   <body>
+    <div class="navigation">
+      <a id="nav-logo-link" href="/">
+        <div class="navigation-logo">
+          <p><span class="navbar-brand-title-span">Pub</span> View</p>
+        </div>
+      </a>
+      <div class="navigation-links-div">
+        <form action="" method="post" name="searchFormNavigation">
+          <div class="form-group" style="display:inline-block">
+            <input type="search" name="s" value="" class="form-control">
+          </div>
+          <button type="submit" class="submitBtn"><i class="fa fa-search"></i></button>
+        </form>
+        <ul id="navigation-links" class="list-unstyled">
+          <li>
+            <a class="nav-link-btn" href="/login">Login</a>
+          </li>
+          <li>
+            <a class="nav-link-btn" href="/register">Sign-up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- if error object has any messages -->
     {% if error.length > 0 %}
       <div class="flashMessage alert alert-danger" role="alert">{{ error }}</div>
