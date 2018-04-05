@@ -9,4 +9,13 @@ $(document).ready(function() {
       }, 5000);
     }
   })();
+
+  // if submit button clicked display loader
+  $('.submitBtnIndex').on('click', function() {
+    var textAreaVal = $('input[name="sIndex"]').val();
+    if (textAreaVal) {
+      $('.loader').addClass('show');
+    }
+  });
+
 });
