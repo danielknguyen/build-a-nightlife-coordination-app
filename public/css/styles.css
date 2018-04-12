@@ -7,6 +7,7 @@
 }
 #bannerTitle {
   font-size: 3em;
+  font-family: 'Bree Serif', serif;
 }
 .bannerIcons {
   font-size: 2.5em;
@@ -14,23 +15,26 @@
 #bannerInfoDiv {
   width: 65%;
   margin: 0 auto;
+  font-family: 'Questrial', sans-serif;
 }
 #bannerInfo {
   font-size: 1.5em;
 }
 .navigation {
   width: 100%;
-  position: fixed;
+  height: 52px;
   border-bottom: 2px solid #bd1f1f;
 }
 .navigation-logo {
   width: 20%;
   height: 50px;
   padding: 10px;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Lobster', cursive;
   background-color: #FFFFFF;
   float: left;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 .navbar-brand-title-span {
   color: #FFFFFF;
@@ -44,6 +48,7 @@
   height: 50px;
   float: right;
   background-color: #FFFFFF;
+  font-family: 'Asap', sans-serif;
 }
 .nav-link-btn {
   padding: 10px;
@@ -187,6 +192,7 @@ a:active {
   letter-spacing: 3px;
   background-color: #000000;
   color: #FFFFFF;
+  font-family: 'Lobster', cursive;
 }
 .loader {
   border: 16px solid #f3f3f3; /* Light grey */
@@ -205,9 +211,6 @@ a:active {
 .show {
   display: block;
 }
-.formDiv {
-  padding: 100px 0;
-}
 .formLabel {
   color: #FFFFFF;
   padding: 10px;
@@ -215,9 +218,49 @@ a:active {
   background-color: #bd1f1f;
   letter-spacing: 3px;
 }
-form[name="registerForm"], form[name="loginForm"] {
+.formDiv {
+  margin-top: 50px;
+}
+form[name="registerForm"], form[name="loginForm"], form[name="settingsForm"] {
   border: 3px solid #f1f1f1;
   padding: 25px;
   width: 60%;
+  margin: 0 auto;
+}
+input[name="userEmail"], input[name="userPassword"], input[name="verifyPassword"] {
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+.item-info-title {
+  font-family: 'Bree Serif', serif;
+  font-size: 1.2em;
+}
+.item-info-ratings-div {
+  font-family: 'Hind Siliguri', sans-serif;
+  letter-spacing: 1px;
+}
+.item-address {
+  font-family: 'Hind Siliguri', sans-serif;
+  letter-spacing: 1px;
+}
+.dashboardReservedDiv {
+  padding-top: 25px;
+}
+.reservationTitle {
+  margin-top: 25px;
+  font-size: 2em;
+  letter-spacing: 1px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+}
+.flashMessage {
+  text-align: center;
+}
+.noRsvpMsg {
+  font-size: 1.2em;
+  text-align: center;
+  border: 2px solid #f1f1f1;
+  padding: 15px 10px;
+  width: 50%;
   margin: 0 auto;
 }
