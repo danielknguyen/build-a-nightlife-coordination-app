@@ -15,7 +15,6 @@ $(document).ready(function() {
     var textAreaVal = $('input[name="sIndex"]').val();
     if (textAreaVal) {
       $('.loader').addClass('show');
-    }
+    };
   });
-
 });
