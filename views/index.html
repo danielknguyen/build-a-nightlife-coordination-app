@@ -70,7 +70,9 @@
     </div>
     <!-- button to let people know you are going -->
     <div class="check-in">
-      <button class="checkInBtn">{{ customers_going }} Going</button>
+      <form action="/rsvp/{{ business.alias }}" method="post" name="rsvpForm">
+        <button class="checkInBtn">Going</button>
+      </form>
     </div>
     <div class="ratings-stars-div">
       <div class="stars-info-div">
