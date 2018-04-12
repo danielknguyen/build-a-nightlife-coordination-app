@@ -4,7 +4,6 @@ var express = require('express'),
     flash = require('connect-flash'),
     morgan = require('morgan'),
     util = require('util'),
-    bcrypt = require('bcrypt-nodejs'),
     assert = require('assert');
     bodyParser = require('body-parser'),
     cookieParser = require('cookie-parser'),
@@ -13,7 +12,7 @@ var express = require('express'),
     db = require('./config/db.js');
     MongoStore = require('connect-mongo')(session),
     Yelp = require('yelp-fusion');
-
+    bcrypt = require('bcrypt-nodejs');
 var appConfig = function() {
   app.use(express.static(__dirname + '/public'));
   app.set('views', __dirname + '/views');
@@ -38,10 +37,26 @@ var appConfig = function() {
     }),
     cookie: {
       secure: false,
-      // 5min in milli
-      maxAge: 300000
+      // 1 day milliseconds
+      expires: 86400000
      }
   }));
+
+  app.use(function(req, res, next) {
+    if (req.session.user) {
+      User.findOne({ '_id': req.session.user }, function(err, user) {
+        if (user) {
+          req.session.user = user._id;
+        } else {
+          req.session.user = undefined;
+        };
+        next();
+      });
+    } else {
+      next();
+    };
+  });
+
   app.use(flash());
   // custom flash middleware
   app.use(function(req, res, next) {
@@ -49,8 +64,13 @@ var appConfig = function() {
     res.locals.error = req.flash('error');
     next();
   });
+
 }();
-var routes = require('./routes/routes.js')(app, flash, util, bcrypt, assert, Yelp);
+// models
+var User = require('./models/userSchema.js');
+var Business = require('./models/businessSchema.js');
+
+var routes = require('./routes/routes.js')(app, flash, util, assert, Yelp, User, bcrypt, Business);
 var port = process.env.PORT || 5000;
 var server = app.listen(port, function() {
   console.log("Express server is listening on port %s.", port);
