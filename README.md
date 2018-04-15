@@ -11,4 +11,4 @@ A full stack JavaScript app that enables users to find venues where they live.
 <br>
 <p>A <a href="https://www.freecodecamp.org/challenges/build-a-nightlife-coordination-app">freeCodeCamp</a> Back-end project</p>
 <br>
-<p>Here is the example <a href="https://radiant-hamlet-15612.herokuapp.com/">application</a></p>
+<p>Here is the example <a href="https://pub-view.herokuapp.com">application</a></p>
